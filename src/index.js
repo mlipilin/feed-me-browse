@@ -9,7 +9,7 @@ import reportWebVitals from './reportWebVitals'
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
 window.renderBrowse = (containerId, history) => {
-  console.log('renderBrowse', { containerId, history })
+  // console.log('renderBrowse', { containerId, history })
   ReactDOM.render(
     <React.StrictMode>
       <App history={history} />
@@ -20,6 +20,12 @@ window.renderBrowse = (containerId, history) => {
 }
 
 window.unmountBrowse = (containerId) => {
-  console.log('unmountBrowse', { containerId })
-  ReactDOM.unmountComponentAtNode(document.getElementById(containerId))
+  console.log('unmountBrowse', {
+    containerId,
+    containerIdNode: document.getElementById(containerId),
+  })
+  const unmounted = ReactDOM.unmountComponentAtNode(
+    document.getElementById(containerId)
+  )
+  return unmounted
 }
