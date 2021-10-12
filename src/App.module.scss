@@ -1,0 +1,32 @@
+.App {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 30px;
+  width: 1024px;
+}
+
+.Restaurants {
+  margin: 0;
+  padding: 0;
+}
+
+.Restaurants__Item {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  & + & {
+    margin-top: 8px;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}

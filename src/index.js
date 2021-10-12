@@ -8,11 +8,11 @@ import reportWebVitals from './reportWebVitals'
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
-window.renderBrowse = (containerId) => {
-  console.log('renderBrowse', { containerId })
+window.renderBrowse = (containerId, history) => {
+  console.log('renderBrowse', { containerId, history })
   ReactDOM.render(
     <React.StrictMode>
-      <App />
+      <App history={history} />
     </React.StrictMode>,
     document.getElementById(containerId)
   )
